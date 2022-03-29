@@ -16,7 +16,8 @@ body {
     margin-bottom: 1rem;
 }
 .firstAidKit {
-  width: 5%;
+  width: 80px;
+  height: 80px;
   padding: 10px;
   display: block;
   margin-left: auto;
@@ -36,6 +37,8 @@ body {
   text-align: center;
   width: 100%;  
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
   section {
     display: flex;
