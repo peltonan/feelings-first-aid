@@ -1,21 +1,31 @@
 body {
     padding: 2rem;
-    color: hsla(215, 5%, 50%, 1);
+    color: rgb(0, 0, 0,);
+    background-color: rgb(255, 227, 227)
   }
   h1 {
-    color: hsla(215, 5%, 10%, 1);
-    margin-bottom: 4rem;
+    color: rgb(0, 0, 0,);
+    margin-bottom: 1rem;
     text-align: center;
+    font-size: 50px;
   }
   .intro {
-    color: hsla(215, 5%, 10%, 1);
+    color: rgb(0, 0, 0,);
     margin-bottom: 2rem;
     text-align: center;
     margin-bottom: 1rem;
 }
+.firstAidKit {
+  width: 5%;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
 
   h2 {
-      color: hsla(215, 5%, 10%, 1);
+      color: rgb(0, 0, 0,);
       margin-bottom: 2rem;
       text-align: center;
       padding-top: 4rem;
@@ -42,8 +52,8 @@ body {
       cursor: pointer;
     }
     &:disabled ~ label {
-      color: hsl(143, 100%, 69%);
-      border-color: hsla(150, 5%, 75%, 1);
+      color: rgb(6, 214, 160);
+      border-color: rgb(0, 0, 0,);
       box-shadow: none;
       cursor: not-allowed;
     }
@@ -52,7 +62,7 @@ body {
     height: 100%;
     display: block;
     background: white;
-    border: 2px solid hsla(143, 100%, 69%);
+    border: 2px solid rgb(6, 214, 160);
     border-radius: 20px;
     height: 8em;
     text-align: center;
@@ -62,14 +72,13 @@ body {
 
   }
   input[type="radio"]:checked + label {
-    background: hsla(150, 75%, 50%, 1);
-    color: hsla(215, 0%, 100%, 1);
-    box-shadow: 0px 0px 10px hsla(143, 100%, 69%);
+    background: rgb(6, 214, 160);
+    color: rgb(0, 0, 0,);
+    box-shadow: 0px 0px 10px rgb(6, 214, 160);
   }
   p {
     font-weight: 900;
     text-align: center;
-    padding: 0.5rem;
   }
   
   

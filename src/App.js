@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import FirstAidKit from './images/favpng_first-aid-kit.png'
 
 function App() {
   /*  const [counter, setCounter] = useState(0)
@@ -12,6 +13,7 @@ function App() {
 
     <div className="App">
       <h1>Feelings First Aid</h1>
+      <img src={FirstAidKit} className="firstAidKit" alt="First Aid Kit"></img>
       {/*       <h2>{counter}</h2>
       <button onClick={clicked}>Click me!</button>
     </div> */}
