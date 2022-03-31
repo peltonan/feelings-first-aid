@@ -2,7 +2,7 @@ export const questions = [
     {
         question: "Did you not get enough sleep this night? Have you slept too little most days this week?",
         yesValue: "I'm tired asf/I suffer from insomnia",
-        noValue: "I slept like a baby"
+        noValue: "I've slept like a baby"
     },
     {
         question: "Do you have a lot of stress right now? Something big happening in your life?",
