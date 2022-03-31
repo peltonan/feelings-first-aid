@@ -83,7 +83,7 @@ body {
     font-weight: 900;
     text-align: center;
   }
-  button {
+  .done {
   width: 190px;
   height: 100px;
   display: block;
@@ -104,6 +104,33 @@ body {
   button:focus {
     background: rgb(6, 214, 160);
   }
+  .navigationWrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+.navigation {
+  display: block;
+  justify-content: center;
+  background: rgb(6, 214, 160);
+  width: 190px;
+  height: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+  background: white;
+  border: 2px solid rgb(6, 214, 160);
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 2px 10px -2px hsla(150, 5%, 65%, 0.5);
+  font-size: 150%;
+  font-weight: 800;
+}
   
   @media only screen and (max-width: 700px) {
     section {
