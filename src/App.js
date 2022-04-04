@@ -18,14 +18,15 @@ function App() {
     <div className="App">
       <h1>Feelings First Aid</h1>
       <img src={FirstAidKit} className="firstAidKit" alt="First Aid Kit"></img>
-      <div className="intro">If you're feeling happy, fine or any positive feelings.
-        You most likely don't need feelings first aid.</div>
-      <div className="intro">Go live your life and enjoy!</div>
-      <div>
-        <div className="intro">Now I will ask you yes/no questions to figure out where you need band-aids&hearts;</div>
-      </div>
-      {!isDone && (
+
+      {isDone && (
         <div>
+          <div className="intro">If you're feeling happy, fine or any positive feelings.
+            You most likely don't need feelings first aid.</div>
+          <div className="intro">Go live your life and enjoy!</div>
+          <div>
+            <div className="intro">Now I will ask you yes/no questions to figure out where you need band-aids&hearts;</div>
+          </div>
           <h2>{currentQuestion + 1}. {questions[currentQuestion].question}</h2>
           <div className="wrapper">
             <section>
@@ -47,8 +48,19 @@ function App() {
           </div>
         </div>
       )}
-      {isDone && (
-        <div>DONE!!!!!</div>
+      {!isDone && (
+        <div className="answerWrapper">
+          {questions.map((question) => {
+            return (<div className="answer">
+              <img src={FirstAidKit} className="firstAidKit" alt="First Aid Kit"></img>
+              <div>
+                <h4>{question.answer}</h4>
+              </div>
+            </div>
+            )
+          })}
+
+        </div>
 
       )}
       <div className="navigationWrapper">
