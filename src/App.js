@@ -4,7 +4,11 @@ import FirstAidKit from './images/favpng_first-aid-kit.png'
 import { questions } from './questions';
 
 function App() {
+  const defaultAnswers = questions.map((question) => {
+    return { answer: false }
+  })
   const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [formState, setFormState] = useState(defaultAnswers)
 
   // useState(default value) returns 2 things:
   // 1: a variable (ex. const) for your state that you get to name
@@ -14,12 +18,24 @@ function App() {
 
   console.log('currentQuestion', currentQuestion)
   console.log('isDone', isDone)
+
+  const handleSelectAnswer = (event) => {
+    const newFormState = [...formState]
+    newFormState[currentQuestion].answer = event.target.value === 'true'
+    setFormState(newFormState)
+    if (currentQuestion == questions.length - 1) {
+      console.log('formState', formState)
+      return setIsDone(true)
+    }
+    setCurrentQuestion(currentQuestion + 1)
+  }
+
   return (
     <div className="App">
       <h1>Feelings First Aid</h1>
       <img src={FirstAidKit} className="firstAidKit" alt="First Aid Kit"></img>
 
-      {isDone && (
+      {!isDone && (
         <div>
           <div className="intro">If you're feeling happy, fine or any positive feelings.
             You most likely don't need feelings first aid.</div>
@@ -29,16 +45,16 @@ function App() {
           </div>
           <h2>{currentQuestion + 1}. {questions[currentQuestion].question}</h2>
           <div className="wrapper">
-            <section>
+            <section onChange={(event) => handleSelectAnswer(event)}>
               <div>
-                <input type="radio" id={`question-one-${currentQuestion}`} className="answer" name={`select-${currentQuestion}`} value={true} checked={null} />
+                <input type="radio" id={`question-one-${currentQuestion}`} className="answer" name={`select-${currentQuestion}`} value={true} checked={false} />
                 <label htmlFor={`question-one-${currentQuestion}`} >
                   <h3>YES</h3>
                   <p>{questions[currentQuestion].yesValue}</p>
                 </label>
               </div>
               <div>
-                <input type="radio" id={`question-two-${currentQuestion}`} className="answer" name={`select-${currentQuestion}`} value={false} checked={null} />
+                <input type="radio" id={`question-two-${currentQuestion}`} className="answer" name={`select-${currentQuestion}`} value={false} checked={false} />
                 <label htmlFor={`question-two-${currentQuestion}`}>
                   <h3>NO</h3>
                   <p>{questions[currentQuestion].noValue}</p>
@@ -48,29 +64,27 @@ function App() {
           </div>
         </div>
       )}
-      {!isDone && (
+      {isDone && (
         <div className="answerWrapper">
-          {questions.map((question) => {
-            return (<div className="answer">
-              <img src={FirstAidKit} className="firstAidKit" alt="First Aid Kit"></img>
+          {questions.map((question, index) => {
+            if (formState[index].answer === false) return
+            return (<fragment className="answer">
               <div>
-                <h4>{question.answer}</h4>
+                <h4>{question.image}{question.answer}</h4>
               </div>
-            </div>
+            </fragment>
             )
           })}
 
         </div>
-
       )}
+      {/* 
       <div className="navigationWrapper">
         {currentQuestion !== 0 && <button className="navigation" onClick={() => setCurrentQuestion(currentQuestion - 1)}>Previous</button>}
         {currentQuestion < questions.length - 1 && <button className="navigation" onClick={() => setCurrentQuestion(currentQuestion + 1)}>Next</button>}
         {currentQuestion >= questions.length - 1 && <button className="done" onClick={() => setIsDone(true)}>DONE</button>}
       </div>
-
-
-
+ */}
       <footer>
         <span>Author: Annette Peltonen</span>
       </footer>
