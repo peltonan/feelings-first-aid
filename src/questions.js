@@ -2,38 +2,18 @@ import './App.css';
 
 //ICONS
 import moon from './icons/sleeping.png'
-import anxiety from './icons/anxiety.png'
 import calm from './icons/calm.png'
-import emojiSleeping from './icons/emoji.png'
-import talking from './icons/chat.png'
-import unmotivated from './icons/decreased-concentration.png'
 import gift from './icons/gift.png'
-import heartFlower from './icons/growth.png'
 import health from './icons/healthcare.png'
-import hungry from './icons/hungry.png'
 import laugh from './icons/laugh.png'
 import butterfly from './icons/let-it-go.png'
-import lock from './icons/locked.png'
 import mentalHealth from './icons/mental-health.png'
-import pain from './icons/myalgia.png'
-import difficultPeople from './icons/no-talking.png'
-import obsessive from './icons/obsessive-compulsive-disorder.png'
-import panda from './icons/panda.png'
 import park from './icons/park.png'
 import headPlant from './icons/philosophy.png'
 import positive from './icons/positive.png'
-import busy from './icons/rush.png'
-import sad from './icons/sad.png'
-import sadTear from './icons/sad-tear.png'
 import food from './icons/salad.png'
-import shame from './icons/shame.png'
-import lazy from './icons/sloth.png'
-import stress from './icons/storm.png'
 import learn from './icons/study.png'
-import thumbsUp from './icons/thumbs-up.png'
-import home from './icons/work-from-home.png'
 import workPositive from './icons/working.png'
-import workNegative from './icons/worktable.png'
 import selfLove from './icons/self-love.png'
 import relax from './icons/coffee-cup.png'
 import freedom from './icons/pigeon.png'
@@ -158,20 +138,20 @@ export const questions = [
     {
         question: "Are you unhappy with your relationship status?",
         yesValue: "I'm single and it sucks!/I'm in a bad relationship.",
-        noValue: "I'm happy being single, don't need a partner/I'm in a happy relationship.",
+        noValue: "I'm happy being single/I'm in a happy relationship.",
         answer: "If you're single, don't give up. Try to look for a partner in different places. Look out for red flags, but don't be too picky. If you're already in a relationship, and things are bad, try to figure out how to improve things. If you have an abusive partner who doesn't change, think about breaking up.",
         image: <img src={love} className="image" alt="Sleep"></img>,
     },
     {
         question: "Do you feel lonely? Do you feel like you don't have any friends?",
         yesValue: "I feel like I have no one I can trust or talk to",
-        noValue: "I have friends that I can trust/I'm an introvert, and like to be by myself",
+        noValue: "I have friends/I'm an introvert, I enjoy my own company",
         answer: "Try to look for friends in new places or maybe you have someone in your life you can get to know better. Sometimes you can also have a feeling that you don't have friends, even though in reality you do. You just feel this way for no reason, even though you know it isn't true.",
         image: <img src={friends} className="image" alt="Sleep"></img>,
     },
     {
         question: "Are you feeling self-destructive? Are you feeling depressed or hopeless?",
-        yesValue: "I feel like, I can't take it anymore. I need a break. Tired of living",
+        yesValue: "I feel like I can't take it anymore, tired of life.",
         noValue: "I'm feeling fine, content with life.",
         answer: "You're not alone. Many people feel like this at times. Write down your thoughts. Talk them out loud. Talk to someone you trust. If you've been having these feelings very long, consider seeing a therapist. Don't be afraid to ask for help. Don't give up.",
         image: <img src={depression} className="image" alt="Sleep"></img>,

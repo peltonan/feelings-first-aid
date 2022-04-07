@@ -12,7 +12,7 @@ function App() {
 
   // useState(default value) returns 2 things:
   // 1: a variable (ex. const) for your state that you get to name
-  // 2: a function for changig the state (ex. setState(my new state)) that you get to name
+  // 2: a function for changing the state (ex. setState(my new state)) that you get to name
   const [isDone, setIsDone] = useState(false)
   console.log('number of questions', questions.length);
 
@@ -29,7 +29,11 @@ function App() {
     }
     setCurrentQuestion(currentQuestion + 1)
   }
-
+  const resetForm = () => {
+    setIsDone(false)
+    setCurrentQuestion(0)
+    setFormState(defaultAnswers)
+  }
   return (
     <div className="App">
       <h1>Feelings First Aid</h1>
@@ -65,17 +69,19 @@ function App() {
         </div>
       )}
       {isDone && (
-        <div className="answerWrapper">
-          {questions.map((question, index) => {
-            if (formState[index].answer === false) return
-            return (<fragment className="answer">
-              <div>
-                <h4>{question.image}{question.answer}</h4>
-              </div>
-            </fragment>
-            )
-          })}
-
+        <div>
+          <div className="answerWrapper">
+            {questions.map((question, index) => {
+              if (formState[index].answer === false) return
+              return (<fragment className="answer">
+                <div>
+                  <h4>{question.image}{question.answer}</h4>
+                </div>
+              </fragment>
+              )
+            })}
+          </div>
+          <button className="reset" onClick={resetForm}>RESET</button>
         </div>
       )}
       {/* 
