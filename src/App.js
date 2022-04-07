@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Answers from './Answers';
 import './App.css';
 import FirstAidKit from './images/favpng_first-aid-kit.png'
 import { questions } from './questions';
@@ -18,6 +19,7 @@ function App() {
 
   console.log('currentQuestion', currentQuestion)
   console.log('isDone', isDone)
+  console.log('"Icon Artists: Freepik, Eucalyp, Flat Icons"')
 
   const handleSelectAnswer = (event) => {
     const newFormState = [...formState]
@@ -45,7 +47,7 @@ function App() {
             You most likely don't need feelings first aid.</div>
           <div className="intro">Go live your life and enjoy!</div>
           <div>
-            <div className="intro">Now I will ask you yes/no questions to figure out where you need band-aids&hearts;</div>
+            <div className="intro">Now I will ask you yes/no questions to figure out where you need band-aids &hearts;</div>
           </div>
           <h2>{currentQuestion + 1}. {questions[currentQuestion].question}</h2>
           <div className="wrapper">
@@ -70,17 +72,7 @@ function App() {
       )}
       {isDone && (
         <div>
-          <div className="answerWrapper">
-            {questions.map((question, index) => {
-              if (formState[index].answer === false) return
-              return (<fragment className="answer">
-                <div>
-                  <h4>{question.image}{question.answer}</h4>
-                </div>
-              </fragment>
-              )
-            })}
-          </div>
+          <Answers formState={formState} />
           <button className="reset" onClick={resetForm}>RESET</button>
         </div>
       )}
@@ -92,7 +84,10 @@ function App() {
       </div>
  */}
       <footer>
-        <span>Author: Annette Peltonen</span>
+        <span>Creators: A. Peltonen & J. Engström</span>
+        <div>
+          {isDone && <span className="iconCreators">Icons: <a href="http://www.flaticon.com">Flaticon</a> by Freepik, Eucalyp & Flat Icons</span>}
+        </div>
       </footer>
     </div>
 

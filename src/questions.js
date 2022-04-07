@@ -1,4 +1,3 @@
-import './App.css';
 
 //ICONS
 import moon from './icons/sleeping.png'
