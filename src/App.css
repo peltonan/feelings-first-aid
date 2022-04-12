@@ -103,6 +103,10 @@ input[type="radio"]:checked+label {
   box-shadow: 0px 0px 10px rgb(6, 214, 160);
 }
 
+label:hover {
+  box-shadow: 0 8px 16px 0 rgb(6, 214, 160);
+}
+
 p {
 
   font-weight: 500;
@@ -146,6 +150,10 @@ p {
   position: relative;
   font-size: 150%;
   font-weight: 800;
+}
+
+.reset:hover {
+  box-shadow: 0 8px 16px 0 rgb(6, 214, 160);
 }
 
 button:focus {
@@ -228,8 +236,15 @@ footer {
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1380px) {
   section {
     flex-direction: column;
+  }
+
+  .answerWrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    grid-row-gap: 50px;
   }
 }

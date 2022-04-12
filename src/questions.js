@@ -138,7 +138,7 @@ export const questions = [
         question: "Are you unhappy with your relationship status?",
         yesValue: "I'm single and it sucks!/I'm in a bad relationship.",
         noValue: "I'm happy being single/I'm in a happy relationship.",
-        answer: "If you're single, don't give up. Try to look for a partner in different places. Look out for red flags, but don't be too picky. If you're already in a relationship, and things are bad, try to figure out how to improve things. If you have an abusive partner who doesn't change, think about breaking up.",
+        answer: "If you're single, don't give up. Try to look for a partner in different places. Look out for red flags, but don't be too picky. If you're already in a relationship, and it's bad, try to figure out how to improve things. If you have an abusive partner who doesn't change, think about breaking up.",
         image: <img src={love} className="image" alt="Sleep"></img>,
     },
     {
