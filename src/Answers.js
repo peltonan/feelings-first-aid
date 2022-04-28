@@ -16,7 +16,7 @@ const Answers = ({ formState }) => {
     return (
         <div className="answerWrapper">
             {answeredQuestions.map((question, index) => {
-                return (<fragment className="answer">
+                return (<fragment className="answerCard">
                     <div>
                         <h4>{question.image}{question.answer}</h4>
                     </div>

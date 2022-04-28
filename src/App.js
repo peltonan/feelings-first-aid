@@ -42,26 +42,25 @@ function App() {
       <img src={FirstAidKit} className="firstAidKit" alt="First Aid Kit"></img>
 
       {!isDone && (
-        <div>
+        <div className="container">
           <div className="intro">If you're feeling happy, fine or any positive feelings.
-            You most likely don't need feelings first aid.</div>
-          <div className="intro">Go live your life and enjoy!</div>
-          <div>
-            <div className="intro">Now I will ask you yes/no questions to figure out where you need band-aids &hearts;</div>
+            You most likely don't need feelings first aid.
+            <div>Go live your life and enjoy!</div>
+            <div>Now I will ask you yes/no questions to figure out where you need band-aids &hearts;</div>
           </div>
-          <h2>{currentQuestion + 1}. {questions[currentQuestion].question}</h2>
+          <h2 className="question">{currentQuestion + 1}. {questions[currentQuestion].question}</h2>
           <div className="wrapper">
-            <section onChange={(event) => handleSelectAnswer(event)}>
-              <div>
-                <input type="radio" id={`question-one-${currentQuestion}`} className="answer" name={`select-${currentQuestion}`} value={true} checked={false} />
-                <label htmlFor={`question-one-${currentQuestion}`} >
+            <section className="answers" onChange={(event) => handleSelectAnswer(event)}>
+              <div className="answerBox">
+                <input type="radio" id={`question-one-${currentQuestion}`} name={`select-${currentQuestion}`} value={true} checked={false} />
+                <label className="answer" htmlFor={`question-one-${currentQuestion}`} >
                   <h3>YES</h3>
                   <p>{questions[currentQuestion].yesValue}</p>
                 </label>
               </div>
-              <div>
-                <input type="radio" id={`question-two-${currentQuestion}`} className="answer" name={`select-${currentQuestion}`} value={false} checked={false} />
-                <label htmlFor={`question-two-${currentQuestion}`}>
+              <div className="answerBox">
+                <input type="radio" id={`question-two-${currentQuestion}`} name={`select-${currentQuestion}`} value={false} checked={false} />
+                <label className="answer" htmlFor={`question-two-${currentQuestion}`}>
                   <h3>NO</h3>
                   <p>{questions[currentQuestion].noValue}</p>
                 </label>
@@ -74,6 +73,7 @@ function App() {
         <div>
           <Answers formState={formState} />
           <button className="reset" onClick={resetForm}>RESET</button>
+
         </div>
       )}
       {/* 
