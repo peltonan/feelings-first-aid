@@ -69,7 +69,7 @@ h3 {
 section {
   display: flex;
   flex-flow: row wrap;
-  width: 60%;
+  width: 50%;
 }
 
 section>div {
@@ -248,13 +248,14 @@ body {
   margin: auto;
 }
 
-
+/* 
 @media only screen and (max-width: 1380px) {
   section {
     flex-direction: column;
     align-content: center;
   }
-}
+} */
+
 
 @media only screen and (max-width: 1120px) {
   .answer {
@@ -270,11 +271,32 @@ body {
   }
 }
 
+@media only screen and (max-width: 1120px) {
+  section {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  section {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  section {
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
 @media only screen and (max-width: 470px) {
   .container {
-    padding: 1rem;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
   }
 }
 
@@ -316,6 +338,12 @@ body {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .answers {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: 470px) {
   .answer {
     max-height: 220px;
@@ -329,8 +357,11 @@ body {
 
 @media only screen and (max-width: 470px) {
   .answerBox {
+    display: flex;
+    justify-content: center;
     padding-bottom: 1rem;
     width: 160px;
+    margin: auto;
   }
 }
 
@@ -343,5 +374,18 @@ body {
 @media only screen and (max-width: 470px) {
   h3 {
     font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .answerWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .answers {
+    display: block;
   }
 }
