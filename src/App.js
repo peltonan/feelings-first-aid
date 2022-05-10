@@ -1,10 +1,20 @@
-import { useState } from 'react';
-import Answers from './Answers';
 import './App.css';
-import FirstAidKit from './images/favpng_first-aid-kit.png'
+
+import { useEffect, useState } from 'react';
 import { questions } from './questions';
 
+import Answers from './Answers';
+import FirstAidKit from './images/favpng_first-aid-kit.png'
+
+
 function App() {
+
+
+  useEffect(() => {
+    document.title = "Feelings First Aid"
+  }, []);
+
+
   const defaultAnswers = questions.map((question) => {
     return { answer: false }
   })
