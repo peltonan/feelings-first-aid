@@ -59,7 +59,7 @@ function App() {
             <div>Now I will ask you yes/no questions to figure out where you need band-aids &hearts;</div>
           </div>
           <h2 className="question">{currentQuestion + 1}. {questions[currentQuestion].question}</h2>
-          <div className="wrapper">
+          <div className="wrapper" key={`${currentQuestion}-question`}>
             <section className="answers" onChange={(event) => handleSelectAnswer(event)}>
               <div className="answerBox">
                 <input type="radio" id={`question-one-${currentQuestion}`} name={`select-${currentQuestion}`} value={true} checked={false} />
@@ -80,7 +80,7 @@ function App() {
         </div>
       )}
       {isDone && (
-        <div>
+        <div className="container">
           <Answers formState={formState} />
           <button className="reset" onClick={resetForm}>RESET</button>
 
@@ -94,9 +94,11 @@ function App() {
       </div>
  */}
       <footer>
-        <span>Creators: A. Peltonen & J. Engström</span>
-        <div>
-          {isDone && <span className="iconCreators">Icons: <a href="http://www.flaticon.com">Flaticon</a> by Freepik, Eucalyp & Flat Icons</span>}
+        <div className="center">
+          <span>Creators: A. Peltonen & J. Engström</span>
+          <div>
+            {isDone && <span className="iconCreators">Icons: <a href="http://www.flaticon.com">Flaticon</a> by Freepik, Eucalyp & Flat Icons</span>}
+          </div>
         </div>
       </footer>
     </div>

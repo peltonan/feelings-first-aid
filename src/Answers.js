@@ -4,7 +4,7 @@ const Answers = ({ formState }) => {
     const answeredQuestions = questions.filter((question, index) => (formState[index].answer === true))
     if (answeredQuestions.length === 0) {
         return (
-            <div>
+            <div className="container">
                 <p>You have answered no to all questions! That means everything seems to be alright.</p>
                 <p>If you feel something is still bothering you, Feelings First Aid might not be helpful for your current situation.</p>
                 <p>Consider contacting a professional for more serious issues or finding help elsewhere.</p>
@@ -14,7 +14,7 @@ const Answers = ({ formState }) => {
         )
     }
     return (
-        <div className="answerWrapper">
+        <div className="answerWrapper container">
             {answeredQuestions.map((question, index) => {
                 return (<fragment className="answerCard">
                     <div>
