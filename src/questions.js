@@ -31,7 +31,7 @@ export const questions = [
     },
     {
         question: "Do you have a lot of stress right now? Something big happening in your life?",
-        yesValue: "Shit is going down, I can't calm down",
+        yesValue: "Alot of shit is going on, I can't calm down",
         noValue: "Everything is fine, I have peace of mind",
         answer: "Stress is a part of life unfortunately, but most things will pass. However, try to find time to relax and do something you enjoy. Meditate, play video games, watch a movie, do something to let your head rest.",
         image: <img src={calm} className="image" alt="Sleep"></img>,
